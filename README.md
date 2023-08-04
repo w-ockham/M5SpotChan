@@ -1,5 +1,5 @@
 # M5SpotChan
-「ｽﾎﾟｯﾄﾁｬﾝ」はSOTA/POTAのスポットを読み上げてくれる、コミュニケーションロボット[ｽﾀｯｸﾁｬﾝ](https://github.com/robo8080/M5Unified_StackChan_ChatGPT_Google)の親戚です。指定した地域のスポットを日本語又は英語で読み上げてくれます。
+「ｽﾎﾟｯﾄﾁｬﾝ」はSOTA/POTAのスポットを読み上げてくれるコミュニケーションロボットです。[ｽﾀｯｸﾁｬﾝ](https://github.com/robo8080/M5Unified_StackChan_ChatGPT_Google)の親戚にあたります。SOTA/POTAのスポット情報を配信するサーバから指定した地域のスポットを受信し、コールサインやアクティベーション先・運用周波数を日本語又は英語で読み上げてくれます。
 
 ![ｽﾎﾟｯﾄﾁｬﾝ](images/spotchan.jpg "ｽﾎﾟｯﾄﾁｬﾝ")
 
@@ -10,6 +10,7 @@
 こちらのキットを使うと簡単に製作できます。
 * [ｽﾀｯｸﾁｬﾝ M5GoBottom版組み立てキット](https://raspberrypi.mongonta.com/about-products-stackchan-m5gobottom-version/ "Title")<br>
 
+Core2では本体横のポートAをサーボ制御用に使っています。ポートを変更する場合は`main.cpp`のdefineを適宜変更してください。
 ### M5Stackへのインストール
 [M5Stack Core2](https://m5stack.com/)又は[M5Stack Core](https://m5stack.com/)に対応しています。PlatformIOでビルド後インストールしてください。また[M5Burner](https://docs.m5stack.com/en/download)にM5Stack Core2用のファームウェアがアップロードされています。
 
