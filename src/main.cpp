@@ -199,7 +199,7 @@ String import_key;
 
 void load_config()
 {
-  if (M5.BtnB.isPressed() || !configfile.loadNVM())
+  if (M5.BtnB.wasPressed() || !configfile.loadNVM())
   {
     Serial.println("Read config from SD.");
     M5.Lcd.println("Read config from SD.");
@@ -347,6 +347,7 @@ void setup()
 
   M5.Speaker.begin();
   M5.Lcd.setTextSize(2);
+
   load_config();
   Servo_setup();
 
@@ -380,7 +381,7 @@ void setup()
   mqtt_client.setBufferSize(512);
   mqtt_client.setCallback(mqtt_callback);
   mqtt_message = new MQTTMessage();
-  
+
   if (import_key != "")
   {
     Serial.println("Load client UUID from myACT.");
@@ -471,11 +472,12 @@ void say(String &str)
 
 void loop()
 {
-  if (M5.BtnA.wasPressed() && (!mp3->isRunning()))
+  M5.update();
+
+  if (M5.BtnA.wasPressed())
   {
     M5.Speaker.tone(1000, 100);
     String tmp;
-
     if (mute_spot)
     {
       if (LANG_CODE == CloudTTSClient::JA_JP)
@@ -501,12 +503,13 @@ void loop()
       avatar.setSpeechText("Stop spotting.");
     }
     mute_spot = !mute_spot;
-    avatar.setExpression(Expression::Happy);
-    google_tts(tmp, LANG_CODE);
-    avatar.setExpression(Expression::Neutral);
+    if (!mp3->isRunning())
+    {
+      avatar.setExpression(Expression::Happy);
+      google_tts(tmp, LANG_CODE);
+      avatar.setExpression(Expression::Neutral);
+    }
   }
-
-  M5.update();
 
   if (M5.BtnB.wasPressed())
   {
