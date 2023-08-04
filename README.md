@@ -25,13 +25,13 @@
 | importkey| myACTのIMPORTキー|
 
 MQTTサブスクリプションには配信を受けるスポット情報を記載します。
-* 日本国内のSOTA/POTAをスポットを受ける場合
+* 日本国内のSOTA/POTAをスポットを受ける場合<br>
   `"subscription" : ["js/spot/pota/ja", "js/spot/sota/ja"],`
-* 全てのSOTA/POTAのスポットを受ける場合
+* 全てのSOTA/POTAのスポットを受ける場合<br>
   `"subscription" : ["js/spot/pota/#", "js/spot/sota/ww"],`
 
-POTAのハンターログを[myACT](https://myact.sotalive.net)にアップロードしている場合は、EXPORTボタンで表示される6桁の番号を記載してください。
-  `"importkey": "123456",`
+POTAのハンターログを[myACT](https://myact.sotalive.net)にアップロードしている場合は、EXPORTボタンで表示される6桁の番号を記載してください。<br>
+  `"importkey": "123456",`<br>
 未ハントの公園のスポットがあると「未ハントの新しいPOTAスポット」と教えてくれます。
 
 ### 使い方
