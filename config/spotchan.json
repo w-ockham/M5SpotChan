@@ -1,0 +1,12 @@
+{
+  "wifi_ssid": "",
+  "wifi_passwd": "",
+  "mqtt_broker": "broker.sotalive.net",
+  "mqtt_port": 1883,
+  "mqtt_user": "subsc",
+  "mqtt_passwd": "sotapota",
+  "volume": 180,
+  "subscription":["js/spot/pota/#","js/spot/sota/ww","debug"],
+  "importkey": "",
+  "clientUUID": ""
+}
