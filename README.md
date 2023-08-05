@@ -10,9 +10,9 @@
 こちらのキットを使うと簡単に製作できます。
 * [ｽﾀｯｸﾁｬﾝ M5GoBottom版組み立てキット](https://raspberrypi.mongonta.com/about-products-stackchan-m5gobottom-version/ "Title")<br>
 
-Core2では本体横のポートAをサーボ制御用に使っています。ポートを変更する場合は`main.cpp`のdefineを適宜変更してください。
+M5Stackは分解が不要なCore2がおすすめです。サーボモータはSG92がおすすめです。Core2では本体横のポートA、Coreでは本体上のポートCをサーボ制御用に使います。ポートを変更する場合は`main.cpp`のdefineを適宜変更してください。
 ### M5Stackへのインストール
-[M5Stack Core2](https://m5stack.com/)又は[M5Stack Core](https://m5stack.com/)に対応しています。PlatformIOでビルド後インストールしてください。また[M5Burner](https://docs.m5stack.com/en/download)にM5Stack Core2用のファームウェアがアップロードされています。
+ファームウェアは[M5Stack Core2](https://m5stack.com/)又は[M5Stack Core](https://m5stack.com/)に対応しています。PlatformIOでプロジェクト環境を選択しビルドしてください。また[M5Burner](https://docs.m5stack.com/en/download)にM5Stack Core2用のファームウェアがアップロードされています。
 
 ### 設定ファイルのインストール
 `config`フォルダにある`spotchan.json`に以下の情報を記載し、FATでフォーマットしたマイクロSDカードのルートディレクトリにおいてください。
