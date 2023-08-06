@@ -27,10 +27,10 @@
 #define SERVO_PIN_X 21
 #define SERVO_PIN_Y 22
 #elif defined(ARDUINO_M5Stack_Core_ESP32)
-//#define SERVO_PIN_X 21 // for Core PORT A
-//#define SERVO_PIN_Y 22
-#define SERVO_PIN_X 17   // for Core PORT C
-#define SERVO_PIN_Y 16 
+// #define SERVO_PIN_X 21 // for Core PORT A
+// #define SERVO_PIN_Y 22
+#define SERVO_PIN_X 17 // for Core PORT C
+#define SERVO_PIN_Y 16
 #endif
 #endif
 
@@ -215,6 +215,9 @@ void load_config()
     const char *s = config["importkey"];
     import_key = s;
     configfile.saveNVM();
+    Serial.println("Save config to NVM.");
+    M5.Lcd.println("Save config to NVM.");
+    sleep(3);
   }
   else
     import_key = "";

@@ -29,7 +29,7 @@ MQTTサブスクリプションには配信を受けるスポット情報を記�
 * 日本国内のSOTA/POTAをスポットを受ける場合<br>
   `"subscription" : ["js/spot/pota/ja", "js/spot/sota/ja"],`
 * 全てのSOTA/POTAのスポットを受ける場合<br>
-  `"subscription" : ["js/spot/pota/#", "js/spot/sota/ww"],`
+  `"subscription" : ["js/spot/pota/ww", "js/spot/sota/ww"],`
 
 POTAのハンターログを[myACT](https://myact.sotalive.net)にアップロードしている場合は、設定ダイアログで「MQTT連携」にチェックを入れ、EXPORTボタンを押して下さい。<br>
 

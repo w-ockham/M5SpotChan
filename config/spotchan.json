@@ -6,7 +6,7 @@
   "mqtt_user": "subsc",
   "mqtt_passwd": "sotapota",
   "volume": 180,
-  "subscription":["js/spot/pota/#","js/spot/sota/ww","debug"],
+  "subscription":["js/spot/pota/ww","js/spot/sota/ww"],
   "importkey": "",
   "clientUUID": ""
 }
