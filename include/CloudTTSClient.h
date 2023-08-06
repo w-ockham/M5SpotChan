@@ -6,7 +6,7 @@
 #include <AudioFileSourceBuffer.h>
 #include "google-tts.h"
 
-#define TTS_BUFFER_SIZE 1024 * 40
+#define TTS_BUFFER_SIZE 1024 * 60
 class CloudTTSClient
 {
 public:
