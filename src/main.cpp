@@ -201,6 +201,10 @@ String import_key;
 
 void load_config()
 {
+  Serial.println("Press B to load config.");
+  M5.Lcd.println("Press B to load config.");
+  sleep(3);
+  M5.update();
   if (M5.BtnB.wasPressed() || !configfile.loadNVM())
   {
     Serial.println("Read config from SD.");
@@ -367,9 +371,11 @@ void setup()
   if (strcmp(wifi_ssid, "") != 0)
   {
     WiFi.begin(wifi_ssid, wifi_passwd);
-    M5.Lcd.print("Connecting");
+    M5.Lcd.printf("Connecting %s", wifi_ssid);
+    Serial.printf("Connecting %s", wifi_ssid);
     Wifi_setup();
     M5.Lcd.println("\nConnected");
+    Serial.println("\nConnected");
   }
   else
     WiFi.begin();
@@ -416,6 +422,7 @@ void setup()
     clientUUID = s;
   }
 
+  sleep(2);
   audioLogger = &Serial;
   mp3 = new AudioGeneratorMP3();
 
